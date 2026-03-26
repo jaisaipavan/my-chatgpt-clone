@@ -1,0 +1,137 @@
+Architecture of the Proposed Text-to-3D Web System
+
++----------------------+
+|     User Prompt      |
+|  "robot helmet"      |
++----------+-----------+
+           |
+           v
++----------------------+
+|    Text Encoder      |
+| (CLIP / Language AI) |
++----------+-----------+
+           |
+           v
++----------------------+
+|   Text-to-3D Model   |
+| (DreamFusion/Magic3D)|
++----------+-----------+
+           |
+           v
++----------------------+
+|   Mesh Generation    |
+|  (3D geometry mesh)  |
++----------+-----------+
+           |
+           v
++----------------------+
+| WebGL Renderer       |
+| (Three.js Engine)    |
++----------+-----------+
+           |
+           v
++----------------------+
+| Interactive Web      |
+| 3D Editor            |
++----------------------+
+
+
+Workflow of the AI-Based 3D Generation System
+
+
+User Input
+   |
+   v
+Text Prompt
+   |
+   v
+AI Model Processing
+   |
+   v
+3D Model Generation
+   |
+   v
+Mesh Conversion
+   |
+   v
+Three.js Rendering
+   |
+   v
+User Interaction
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+Prototype Implementation
+
+To demonstrate the feasibility of the proposed system, a simple prototype was developed using Three.js, a JavaScript library for WebGL-based 3D rendering. The prototype allows users to input a textual prompt and visualize a generated 3D object within a browser environment.
+
+The prototype consists of a web interface where the user enters a prompt describing a 3D object. The system then loads a generated 3D model and renders it using the Three.js rendering engine. The scene includes a camera, lighting system, and a basic geometry object that represents the generated model.
+
+The purpose of this prototype is to demonstrate how AI-generated 3D assets can be integrated into web-based visualization environments. Although the current implementation uses placeholder geometry, it illustrates the process of rendering generated objects and interacting with them in real time.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+index.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Text to 3D Demo</title>
+</head>
+
+<body>
+
+<input id="prompt" placeholder="Enter object description">
+<button onclick="generate()">Generate</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
+------------------------------------------------------------------------------------------------------------------------------------------------
+app.js
+const scene = new THREE.Scene();
+
+const camera = new THREE.PerspectiveCamera(
+75,
+window.innerWidth/window.innerHeight,
+0.1,
+1000
+);
+
+const renderer = new THREE.WebGLRenderer();
+renderer.setSize(window.innerWidth,window.innerHeight);
+document.body.appendChild(renderer.domElement);
+
+const geometry = new THREE.BoxGeometry();
+const material = new THREE.MeshBasicMaterial({color:0x00ff00});
+
+const cube = new THREE.Mesh(geometry,material);
+scene.add(cube);
+
+camera.position.z = 5;
+
+function animate(){
+requestAnimationFrame(animate);
+cube.rotation.x += 0.01;
+cube.rotation.y += 0.01;
+renderer.render(scene,camera);
+}
+
+animate();
+
+---
+1 Abstract
+
+2 Introduction
+
+3 Literature Review
+
+4 Methodology
+   - System Architecture
+   - Workflow
+   - Prototype Implementation
+
+5 Results
+
+6 Conclusion
+
+7 References

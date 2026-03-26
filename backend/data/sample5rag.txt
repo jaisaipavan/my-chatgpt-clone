@@ -1,0 +1,54 @@
+RAG
+
+RAG = data engineering + retrieval + LLM prompting
+
+1.python
+2.API's
+3.LLM
+4.Embeddings
+5.Vector Databases
+6.Document Processing
+7.RAG Pipeline
+8.Advanced RAG
+-------------------------------------
+Artificial Intelligence (AI)
+      ↓
+Machine Learning (ML)
+      ↓
+Deep Learning
+      ↓
+Large Language Models (LLMs)
+      ↓
+RAG Systems
+
+
+Groq → development + fast testing
+Ollama → local / private deployment
+----------------------------------------
+
+Sentence Transformers → create embeddings
+
+Chroma → store embeddings
+
+Groq API → run LLM without OpenAI billing
+
+-----------------------------------------
+
+ModuleNotFound------install package
+TypeError----------	wrong usage
+404 model_not_found----------	wrong model
+400 bad request---------	wrong config
+
+--------------------------------------------------
+
+User Question 
+     ↓
+Flask API (/chat)
+     ↓
+Retriever (vectorless)
+     ↓
+Context
+     ↓
+LLM (Groq)
+     ↓
+Answer

@@ -1,0 +1,36 @@
+suggest some publications relating to this paper that i can use for a literature review
+
+if i.d like to research on --------------,are there any datasets available i could use?
+
+explain chatgpt how datasets you want to import through any language or article
+
+compare 5-6 ml algorithm 
+analyse results or take guide or code from gpt
+
+paper
+start:
+1.abstract
+2.intro
+3.literacy review
+4.methodology or analysis
+5.results
+6.conclusion
+add references
+
+use ymgrad for other collab
+
+for section 1 - i want to describe the problem, existing solution, my idea ,result
+
+for section2 -explain them
+section 3 - literature review
+4 - methodology
+5 - results 
+
+| Section           | Length    |
+| ----------------- | --------- |
+| Abstract          | 150 words |
+| Introduction      | 1 page    |
+| Literature Review | 1.5 pages |
+| Methodology       | 1 page    |
+| Results           | 1 page    |
+| Conclusion        | 0.5 page  |

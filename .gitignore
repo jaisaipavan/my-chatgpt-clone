@@ -1,0 +1,18 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# FAISS / DB
+db/
+
+# Node / React
+frontend/node_modules/
+frontend/build/
+
+# OS / IDE
+.DS_Store
+*.log
+*.env

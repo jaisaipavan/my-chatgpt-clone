@@ -1,0 +1,51 @@
+html
+CSS (vanilla or tailwind) can use ui components like shadcn
+JavaScript
+---
+react - 3d editors need complex ui systems - so make ui modular
+next.js - for giving routing,performance,deployment,api routes
+---
+webgl - lets the browser render GPU-accelerated 3d graphics
+three.js - allows to create 3d objects.lights,cameras,animations
+---
+react + 3d integrations
+like:  (react three fiber)
+---
+1. first  we build basic 3d tools like object creation,transform controls,scene hierarchy
+
+2. import 3d models use loader like glft,obj,fbx
+
+3.build a full editor interface
+
+4.saving projects we use go and json data to store scenes we need database to store
+
+5.advanced 3d features like materials editor,lighting tools,physics,real-time rendering
+
+6. multiplayer collab (idk why i added this) - websockets, crdt libraries
+
+7.deployment using vercel or render or aws or cloudflare
+---
+architecture for building:
+
+Browser
+ ├ UI (React + Tailwind)
+ ├ 3D Engine (Three.js)
+ ├ Scene Editor
+ ├ Asset Manager
+ └ Export Engine
+
+Backend
+ ├ Save projects
+ └ User accounts
+---
+Core technologies:
+
+React
+
+Next.js
+
+Three.js
+
+React Three Fiber
+
+---
