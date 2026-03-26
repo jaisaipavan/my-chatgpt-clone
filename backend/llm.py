@@ -2,7 +2,7 @@ from groq import Groq
 
 # Set your GROQ_API_KEY in environment variables
 import os
-api_key = os.environ.get("GROQ_API_KEY")
+api_key = os.environ.get("gsk_2h8wXz224Wd1pQ9h8wXz224Wd1pQ9h8w")
 client = Groq(api_key=api_key)
 
 def generate_answer(context, user_query):
